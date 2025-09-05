@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PRC.Api", "PRC.Api.csproj", "{F5D4A838-EA3E-47DA-AEED-42C425AAF015}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PRC.Core", "..\PRC.Core\PRC.Core.csproj", "{1315E7FC-5A29-487B-AA4E-4A23E8E1A351}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F5D4A838-EA3E-47DA-AEED-42C425AAF015}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5D4A838-EA3E-47DA-AEED-42C425AAF015}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5D4A838-EA3E-47DA-AEED-42C425AAF015}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5D4A838-EA3E-47DA-AEED-42C425AAF015}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1315E7FC-5A29-487B-AA4E-4A23E8E1A351}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1315E7FC-5A29-487B-AA4E-4A23E8E1A351}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1315E7FC-5A29-487B-AA4E-4A23E8E1A351}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1315E7FC-5A29-487B-AA4E-4A23E8E1A351}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8296898F-B5F1-4D93-B8AD-B9D28783BD2E}
+	EndGlobalSection
+EndGlobal
