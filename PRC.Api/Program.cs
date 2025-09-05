@@ -11,6 +11,13 @@ using PRC.Core.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Load configuration files in order of precedence
+builder.Configuration
+    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+    .AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", optional: true, reloadOnChange: true)
+    .AddJsonFile("appsettings.Local.json", optional: true, reloadOnChange: true)
+    .AddEnvironmentVariables();
+
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 Console.WriteLine($"Connection String: {connectionString}");

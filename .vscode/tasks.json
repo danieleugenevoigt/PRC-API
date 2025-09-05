@@ -1,0 +1,73 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "build",
+        "${workspaceFolder}/PRC.Api/PRC.Api.csproj",
+        "/property:GenerateFullPaths=true",
+        "/consoleloggerparameters:NoSummary"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "run-http",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "run",
+        "--project",
+        "${workspaceFolder}/PRC.Api/PRC.Api.csproj",
+        "--launch-profile",
+        "http"
+      ],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": "$msCompile",
+      "isBackground": true
+    },
+    {
+      "label": "watch",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "watch",
+        "run",
+        "--project",
+        "${workspaceFolder}/PRC.Api/PRC.Api.csproj",
+        "--launch-profile",
+        "http"
+      ],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": "$msCompile",
+      "isBackground": true,
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    }
+  ]
+}
