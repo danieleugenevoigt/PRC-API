@@ -14,5 +14,6 @@
         public DateTime UpdatedAt { get; set; }
         public IEnumerable<ProductImageResponse> ProductImages { get; set; } = new List<ProductImageResponse>(); 
         public IEnumerable<CategoryResponse> Categories { get; set; } = new List<CategoryResponse>();
+        public decimal? Rating { get; set; }
     }
 }

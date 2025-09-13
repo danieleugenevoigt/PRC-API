@@ -18,7 +18,6 @@ namespace PRC.Core.Repositories
             return await _context.Products
                 .Include(p => p.ProductImages)
                 .Include(p => p.Categories)
-                .Take(10) // Limit for testing
                 .Select(p => new ProductTransform
                 {
                     Id = p.Id,
@@ -44,7 +43,8 @@ namespace PRC.Core.Repositories
                         Id = c.Id,
                         Name = c.Name,
                         Slug = c.Slug
-                    }).ToList()
+                    }).ToList(),
+                    Rating = p.Rating
                 })
                 .ToListAsync();
         }
@@ -80,7 +80,8 @@ namespace PRC.Core.Repositories
                         Id = c.Id,
                         Name = c.Name,
                         Slug = c.Slug
-                    }).ToList()
+                    }).ToList(),
+                    Rating = p.Rating
                 })
                 .FirstOrDefaultAsync();
         }
@@ -116,7 +117,8 @@ namespace PRC.Core.Repositories
                         Id = c.Id,
                         Name = c.Name,
                         Slug = c.Slug
-                    }).ToList()
+                    }).ToList(),
+                    Rating = p.Rating
                 })
                 .FirstOrDefaultAsync();
         }
@@ -152,7 +154,8 @@ namespace PRC.Core.Repositories
                         Id = c.Id,
                         Name = c.Name,
                         Slug = c.Slug
-                    }).ToList()
+                    }).ToList(),
+                    Rating = p.Rating
                 })
                 .ToListAsync();
         }

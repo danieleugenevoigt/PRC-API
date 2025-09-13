@@ -14,5 +14,6 @@ namespace PRC.Core.Transforms
         public DateTime UpdatedAt { get; set; }
         public IEnumerable<ProductImageTransform> ProductImages { get; set; } = new List<ProductImageTransform>();
         public IEnumerable<CategoryTransform> Categories { get; set; } = new List<CategoryTransform>();
+        public decimal? Rating { get; set; }
     }
 }
